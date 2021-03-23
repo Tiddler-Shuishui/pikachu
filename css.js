@@ -1,23 +1,13 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
+const string = `/* 画一个皮卡丘送给你 */
+/* 首先，画它的皮肤 */
+html,body{
   background: #ffe035;
 }
-
 #skin {
   position: relative;
 }
 
+/* 接下来，画它的鼻子 */
 .nose {
   border: 10px solid red;
   border-color: #000 transparent transparent;
@@ -63,6 +53,7 @@ body {
   animation: wave .3s infinite linear;
 }
 
+/* 画它的眼睛 */
 #eye {
   border: 1px solid #b09b25;
   width: 72px;
@@ -75,6 +66,7 @@ body {
   background: black;
 }
 
+/* 画它的眼球 */
 #eye::before {
   content: '';
   display: block;
@@ -89,14 +81,17 @@ body {
   transform-origin: 10px 34px;
 }
 
+/* 左边一个 */
 #eye.left {
   transform: translateX(-100px);
 }
 
+/* 右边一个 */
 #eye.right {
   transform: translateX(100px);
 }
 
+/* 那么，再画它的嘴巴 */
 .mouth {
   width: 200px;
   height: 180px;
@@ -107,8 +102,7 @@ body {
   overflow: hidden;
 }
 
-.mouth .up {}
-
+/* 先画它的胡子 */
 .mouth .up .lip {
   border: 5px solid transparent;
   height: 60px;
@@ -120,18 +114,21 @@ body {
   z-index: 2;
 }
 
+/* 左边一个 */
 .mouth .up .lip.left {
   transform: rotate(-20deg);
   left: -9px;
   top: -25px;
 }
 
+/* 右边一个 */
 .mouth .up .lip.right {
   transform: rotate(20deg);
   left: 87px;
   top: -25px;
 }
 
+/* 再画它的嘴唇 */
 .mouth .down {
   height: 180px;
   position: absolute;
@@ -165,6 +162,7 @@ body {
   background: #ff5b5d;
 }
 
+/* 最后，再画它的脸蛋 */
 .face {
   position: absolute;
   width: 80px;
@@ -178,10 +176,15 @@ body {
   border-radius: 50%;
 }
 
+/* 左边一个 */
 .face.left {
   transform: translateX(-140px);
 }
 
+/* 右边一个 */
 .face.right {
   transform: translateX(140px);
 }
+
+/* 呐，画好了，皮卡丘送给你！ */`
+export default string
